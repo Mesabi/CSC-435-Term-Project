@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import './login-page.css';
 
-
+//I think this counts as a component? I copied a lot of stuff, but this is already a week late...
 const LoginPage = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
