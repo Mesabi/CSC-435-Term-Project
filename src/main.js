@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import LoginPage from './login-page';
 import Square from './ticTacToe';
 import UserPage from './user-page';
+import CreateNewUser from './user-creation';
+import MyApp from './test_95';
 
 //use this to switch between web pages. 
 function ParentComponent() {
@@ -17,7 +19,7 @@ function ParentComponent() {
         componentToRender = <LoginPage />;
         break;
       case 2:
-        componentToRender = <Square />;
+        componentToRender = <CreateNewUser />;
         break;
       case 3:
         componentToRender = <LoginPage />;
@@ -25,8 +27,11 @@ function ParentComponent() {
       case 4:
         componentToRender = <UserPage />;
         break;
+      case 5:
+          componentToRender = <MyApp />;
+          break;
       default:
-        componentToRender = <LoginPage />;
+        componentToRender = <MyApp />;
         break;
     }
   
@@ -34,9 +39,10 @@ function ParentComponent() {
       <div>
         <div>
           <button onClick={() => handleClick(1)}>Log In Page</button>
-          <button onClick={() => handleClick(2)}>Tic Tac Toe</button>
+          <button onClick={() => handleClick(2)}>Create New User (week 4)</button>
           <button onClick={() => handleClick(3)}>Log In Page</button>
           <button onClick={() => handleClick(4)}>UserPage</button>
+          <button onClick={() => handleClick(5)}>UserPage</button>
         </div>
         {componentToRender}
       </div>
