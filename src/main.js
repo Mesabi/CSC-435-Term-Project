@@ -3,7 +3,7 @@ import LoginPage from './login-page';
 import Square from './ticTacToe';
 import UserPage from './user-page';
 import CreateNewUser from './user-creation';
-import MyApp from './test_95';
+import { GlobalStyle, ThemeProvider} from '@react95/core';
 
 //use this to switch between web pages. 
 function ParentComponent() {
@@ -28,14 +28,18 @@ function ParentComponent() {
         componentToRender = <UserPage />;
         break;
       case 5:
-          componentToRender = <MyApp />;
+          componentToRender = <LoginPage />;
           break;
       default:
-        componentToRender = <MyApp />;
+        componentToRender = <LoginPage />;
         break;
     }
   
     return (
+      <>
+      <ThemeProvider>    
+
+      <GlobalStyle></GlobalStyle>
       <div>
         <div>
           <button onClick={() => handleClick(1)}>Log In Page</button>
@@ -46,6 +50,8 @@ function ParentComponent() {
         </div>
         {componentToRender}
       </div>
+      </ThemeProvider>    
+      </>
     );
   }
   

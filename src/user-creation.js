@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import './user-creation.css';
-import { GlobalStyle, Fieldset, Button, Checkbox, TitleBar, ThemeProvider, table } from '@react95/core';
+import { GlobalStyle, Fieldset, Button, Checkbox, TitleBar, ThemeProvider} from '@react95/core';
 import '@react95/icons/icons.css';
 
 const CreateNewUser = () => {
