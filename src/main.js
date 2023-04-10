@@ -1,44 +1,49 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import LoginPage from './login-page';
 import Square from './ticTacToe';
 import UserPage from './user-page';
 import CreateNewUser from './user-creation';
 import { GlobalStyle, ThemeProvider} from '@react95/core';
 
-//use this to switch between web pages. 
 function ParentComponent() {
-    const [component, setComponent] = useState(1);
-  
-    const handleClick = (newComponent) => {
-      setComponent(newComponent);
-    }
-  
-    let componentToRender;
-    switch (component) {
-      case 1:
-        componentToRender = <LoginPage />;
-        break;
-      case 2:
-        componentToRender = <CreateNewUser />;
-        break;
-      case 3:
-        componentToRender = <LoginPage />;
-        break;
-      case 4:
-        componentToRender = <UserPage />;
-        break;
-      case 5:
-          componentToRender = <LoginPage />;
-          break;
-      default:
-        componentToRender = <LoginPage />;
-        break;
-    }
-  
-    return (
-      <>
-      <ThemeProvider>    
+  const [component, setComponent] = useState(1);
 
+  useEffect(() => {
+    return () => {
+      // This cleans up memory leaks...
+      console.log(`Component ${component} unmounted.`);
+    };
+  }, [component]);
+
+  const handleClick = (newComponent) => {
+    setComponent(newComponent);
+  }
+
+  let componentToRender;
+  switch (component) {
+    case 1:
+      componentToRender = <LoginPage />;
+      break;
+    case 2:
+      componentToRender = <CreateNewUser />;
+      break;
+    case 3:
+      componentToRender = <LoginPage />;
+      break;
+    case 4:
+      componentToRender = <UserPage />;
+      break;
+    case 5:
+      componentToRender = <LoginPage />;
+      break;
+    default:
+      componentToRender = <LoginPage />;
+      break;
+  }
+
+  return (
+    <>
+    <ThemeProvider>    
       <GlobalStyle></GlobalStyle>
       <div>
         <div>
@@ -50,9 +55,9 @@ function ParentComponent() {
         </div>
         {componentToRender}
       </div>
-      </ThemeProvider>    
-      </>
-    );
-  }
-  
-  export default ParentComponent;
+    </ThemeProvider>    
+    </>
+  );
+}
+
+export default ParentComponent;
