@@ -3,7 +3,6 @@ import { Outlet, Link } from "react-router-dom";
 const Layout = () => {
   return (
     <>
-    <Button>I Exist!</Button>
       <nav>
         <ul>
           <li>
