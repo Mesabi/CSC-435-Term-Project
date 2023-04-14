@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Button, Checkbox, TitleBar, ThemeProvider } from '@react95/core';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
 import MyApp from './test_95.js'

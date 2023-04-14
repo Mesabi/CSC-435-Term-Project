@@ -1,5 +1,4 @@
 import { Outlet, Link } from "react-router-dom";
-import { Button, Checkbox, TitleBar, ThemeProvider } from '@react95/core';
 
 const Layout = () => {
   return (
