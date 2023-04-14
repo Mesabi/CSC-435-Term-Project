@@ -1,17 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React, { useState } from 'react';
+import { Button, Checkbox, TitleBar, ThemeProvider } from '@react95/core';
+import '@react95/icons/icons.css';
+import MyApp from './test_95.js'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+import { Route } from "react-router-dom";
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const Aurora = () => {
+    return (
+        <>
+        <h1>TEST</h1>
+        </>
+      );
+
+
+    };
+
+export default Aurora;
