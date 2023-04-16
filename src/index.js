@@ -6,8 +6,11 @@ import LoginPage from './login-page';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import ParentComponent from './main.js';
 import Belt from './switch';
+=======
+>>>>>>> parent of 9902206 (Week 3 Complete)
 =======
 >>>>>>> parent of 9902206 (Week 3 Complete)
 
@@ -16,7 +19,11 @@ root.render(
   <React.StrictMode>
   
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Belt />
+=======
+    <LoginPage />
+>>>>>>> parent of 9902206 (Week 3 Complete)
 =======
     <LoginPage />
 >>>>>>> parent of 9902206 (Week 3 Complete)
