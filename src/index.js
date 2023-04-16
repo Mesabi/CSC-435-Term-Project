@@ -3,17 +3,23 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import LoginPage from './login-page';
-import Square from './ticTacToe';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
+<<<<<<< HEAD
 import ParentComponent from './main.js';
 import Belt from './switch';
+=======
+>>>>>>> parent of 9902206 (Week 3 Complete)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
   
+<<<<<<< HEAD
     <Belt />
+=======
+    <LoginPage />
+>>>>>>> parent of 9902206 (Week 3 Complete)
   </React.StrictMode>
   
 );
